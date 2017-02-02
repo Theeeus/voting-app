@@ -1,0 +1,29 @@
+html
+    head
+        title Create a New Poll
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u", crossorigin="anonymous")
+        link(rel='stylesheet', href='/css/style.css')
+        script(src="https://use.fontawesome.com/a23e082358.js")
+        script(src='/js/script.js')
+    body
+        #navbarAuth.navbar
+            .navbarLeft.pull-left
+                p
+                    i.fa.fa-check-square-o
+                    | Polls
+            .navbarRight.pull-right
+                a.btn.btn-default.navbarLinks(href='/') Home
+                a.btn.btn-default.navbarLinks(href='/new') New Poll
+                a.btn.btn-default.navbarLinks(href='/mypolls') My Polls
+                a.btn.btn-danger.logoutBtn(href='/logout') Logout
+        .container
+            h1.segmentTitle Create a New Poll below
+            form#newPoll(method="post",action="/newPoll")
+                p Question
+                input.inputNew(type="text",name="question" required)
+                #newPollOptions
+                    p Options
+                    input.inputNew(type="text",name="options" required)
+                    input.inputNew(type="text",name="options" required)
+                button.addOp(type='button',onClick="addInput()") + Add another option
+                input.inputNew.btn.btn-pink#inputNewSub(type="submit")

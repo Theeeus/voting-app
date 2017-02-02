@@ -1,0 +1,70 @@
+html
+    head
+        title #{poll.name} | Social Polls
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u", crossorigin="anonymous")
+        link(rel='stylesheet', href='/css/style.css')
+        script(src="https://use.fontawesome.com/a23e082358.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js")
+        script(src='/js/script.js')
+        meta(property='og:url', content='http://localhost:8080/polls')
+        meta(property='og:type', content='website')
+        meta(property='og:title', content='Your Website Title')
+        meta(property='og:description', content='Your description')
+        meta(property='og:image', content='https://camo.githubusercontent.com/60c67cf9ac2db30d478d21755289c423e1f985c6/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f66726565636f646563616d702f776964652d736f6369616c2d62616e6e65722e706e67')
+    body
+        // JavaScript SDK
+        div#fb-root
+        script.
+         (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1714422175537322";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        // /JavaScript SDK
+        - if (!auth) {
+        .navbar
+            .navbarLeft.pull-left
+                p
+                    i.fa.fa-check-square-o
+                    | Polls
+            .navbarRight.pull-right
+                a.btn.btn-default.navbarLinks(href='/') Home
+                a.btn.btn-primary(href='/auth/facebook')
+                    i.fa.fa-facebook
+                    |  Entrar com o Facebook
+        - } else {
+        #navbarAuth.navbar
+            .navbarLeft.pull-left
+                p
+                    i.fa.fa-check-square-o
+                    | Polls
+            .navbarRight.pull-right
+                a.btn.btn-default.navbarLinks(href='/') Home
+                a.btn.btn-default.navbarLinks(href='/new') New Poll
+                a.btn.btn-default.navbarLinks(href='/mypolls') My Polls
+                a.btn.btn-danger.logoutBtn(href='/logout') Logout
+        - }
+        .container
+            h1.segmentTitle.pollHeader=poll.name
+            .formCont
+                form#voteForm(method='post', action='/vote')
+                    - for (var i=0;i<poll.options.length;i++) {
+                    .inputCont
+                        input(type='radio', name='option', value={option: poll.options[i].option, id : poll._id})
+                        |  #{poll.options[i].option}
+                    - }
+                    button.addOp(type='button',onClick="showInput()") + Add another option
+                    input.btn.btn-pink(type='submit', value='Vote')
+                form#voteNew(method='post', action='/voteNew')
+                    input(type='text', name='vote')
+                    input(type='hidden', name='id', value=poll._id)
+                    input.btn.btn-pink#addVoteBtn(type='submit', value='Add & Vote')
+                .fb-share-button(data-href='http://localhost:8080/', data-layout='button', data-size='small', data-mobile-iframe='false')
+                    a.fb-xfbml-parse-ignore(target='_blank', href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&src=sdkpreparse') Share
+            .canvasCont
+                canvas#myChart
+            script.
+                var poll_client = !{poll_server}
+            script(src='/js/chart.js')
