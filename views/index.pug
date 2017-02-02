@@ -11,18 +11,18 @@ html
             .navbarLeft.pull-left
                 p
                     i.fa.fa-check-square-o
-                    | Polls
+                    | Social Polls
             .navbarRight.pull-right
                 a.btn.btn-default.navbarLinks(href='/') Home
                 a.btn.btn-primary(href='/auth/facebook')
                     i.fa.fa-facebook
-                    |  Entrar com o Facebook
+                    |  Sign in with Facebook
         - } else {
         #navbarAuth.navbar
             .navbarLeft.pull-left
                 p
                     i.fa.fa-check-square-o
-                    | Polls
+                    | Social Polls
             .navbarRight.pull-right
                 a.btn.btn-default.navbarLinks(href='/') Home
                 a.btn.btn-default.navbarLinks(href='/new') New Poll
@@ -32,9 +32,17 @@ html
         .container
             .about
                 h1 Create a Free Poll in Seconds.
-                p Social Polls is a free tool for creating intuitive and easy-to-use polls</br>that you can share with your friends on Facebook.
+                p Social Polls is a free tool for creating</br>intuitive and easy-to-use polls that you can share</br>with your friends on Facebook.
             .recent
                 h2.segmentTitle Recent Polls
                 - for (var i=0;i<polls.length;i++) {
                 a.pollItem(href='/polls/'+polls[i].id) #{polls[i].name}
                 - }
+        .footer
+            p
+                | This Social Polls app was built by 
+                a(href='https://github.com/Theeeus', target='_blank') @Theeeus
+                |  for Free Code Camp.
+            p
+                | It is available at the following Github repository: 
+                a(href='https://github.com/Theeeus/voting-app', target='_blank') Theeeus/voting-app

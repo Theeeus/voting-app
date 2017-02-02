@@ -10,7 +10,7 @@ html
             .navbarLeft.pull-left
                 p
                     i.fa.fa-check-square-o
-                    | Polls
+                    | Social Polls
             .navbarRight.pull-right
                 a.btn.btn-default.navbarLinks(href='/') Home
                 a.btn.btn-default.navbarLinks(href='/new') New Poll
@@ -26,4 +26,4 @@ html
                     input.inputNew(type="text",name="options" required)
                     input.inputNew(type="text",name="options" required)
                 button.addOp(type='button',onClick="addInput()") + Add another option
-                input.inputNew.btn.btn-pink#inputNewSub(type="submit")
+                input.inputNew.btn.btn-pink#inputNewSub(type="submit" value="Create")

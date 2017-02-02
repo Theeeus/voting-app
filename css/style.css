@@ -50,30 +50,10 @@ i {
     padding: 0 10px;
 }
 
-/* /Navbar */
+/* General */
 
 .container {
     padding-top: 30px;
-}
-
-.about {
-/*    padding-left: 50px; */
-    margin: 0;
-    background: #fff;
-}
-
-.about h1 {
-    font-size: 44px;
-    font-weight: bold;
-    color: #FF5A5F;
-}
-
-.about p {
-    font-size: 36px;
-}
-
-.recent {
-    margin-top: 50px;
 }
 
 .segmentTitle {
@@ -100,22 +80,15 @@ i {
     font-weight: bold;
 }
 
-#newPoll p{ 
-    margin-top: 15px;
-}
-
 .inputNew {
     display: block;
     width: 300px;
     margin-bottom: 5px;
 }
 
-#inputNewSub {
-    margin-top: 30px;
-}
-
-.inputCont * {
-    display: inline-block;
+.btn-pink {
+    background: #FF5A5F;
+    color: #fff;
 }
 
 .addOp {
@@ -126,6 +99,64 @@ i {
     margin: 10px 0;
 }
 
+.footer {
+    margin: 100px auto 0;
+    width: 500px;
+}
+
+/* Index */
+
+.about {
+    margin: 0;
+    background: #fff;
+}
+
+.about h1 {
+    font-size: 44px;
+    font-weight: bold;
+    color: #FF5A5F;
+}
+
+.about p {
+    font-size: 36px;
+}
+
+.recent {
+    margin-top: 50px;
+}
+
+/* New */
+
+#newPoll p{ 
+    margin-top: 15px;
+}
+
+#inputNewSub {
+    margin-top: 30px;
+}
+
+/* Poll */ 
+
+.inputCont * {
+    display: inline-block;
+}
+
+#addVoteBtn {
+    margin-left: 10px;
+}
+
+.fb-share-button {
+    margin-top: 50px;
+}
+
+#voteBtn {
+    margin-top: 20px;
+}
+
+#deleteBtn {
+    display: block;
+    margin: 20px auto 0;
+}
 
 .pollHeader {
     margin-bottom: 30px;
@@ -147,7 +178,6 @@ i {
     float: right;
 } 
 
-
 #myChart {
     width: 400px !important;
 	height: 400px !important;
@@ -156,26 +186,4 @@ i {
 
 #voteNew {
     display: none;
-}
-
-.btn-pink {
-    background: #FF5A5F;
-    color: #fff;
-}
-
-#addVoteBtn {
-    margin-left: 10px;
-}
-
-.fb-share-button {
-    margin-top: 50px;
-}
-
-#voteBtn {
-    margin-top: 20px;
-}
-
-#deleteBtn {
-    display: block;
-    margin: 20px auto 0;
 }
