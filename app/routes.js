@@ -23,7 +23,13 @@ app.get('/polls',function(req,res){
 		
 app.get('/polls/:id', function(req,res){
     db.votingPolls.find({ _id : ObjectId(req.params.id) },function(err,poll){
-        res.render('poll',{ auth : req.isAuthenticated(), poll : poll[0],  poll_server: JSON.stringify(poll[0])});
+        var user;
+        if (req.user) {
+            user = req.user.id;
+        } else {
+            user = '';
+        }
+        res.render('poll',{ auth : req.isAuthenticated(), userId : user, poll : poll[0],  poll_server: JSON.stringify(poll[0])});
     });
 });
 
@@ -89,6 +95,12 @@ app.post('/voteNew',function(req,res){
     }
     );
     res.redirect('/polls/'+id);
+});
+
+app.post('/deletePoll', function(req,res){
+    var id = req.body.id;
+    db.votingPolls.remove({_id : ObjectId(id)});
+    res.redirect('/');
 });
 
 function isLoggedIn(req, res, next) {

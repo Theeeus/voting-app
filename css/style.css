@@ -151,6 +151,7 @@ i {
 #myChart {
     width: 400px !important;
 	height: 400px !important;
+    margin: auto;
 }
 
 #voteNew {
@@ -167,5 +168,14 @@ i {
 }
 
 .fb-share-button {
-    margin-top: 100px;
+    margin-top: 50px;
+}
+
+#voteBtn {
+    margin-top: 20px;
+}
+
+#deleteBtn {
+    display: block;
+    margin: 20px auto 0;
 }
