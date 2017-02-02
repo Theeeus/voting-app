@@ -11,7 +11,6 @@ html
         meta(property='og:type', content='website')
         meta(property='og:title', content=poll.name)
         meta(property='og:description', content='Social Polls - Create a Free Poll in Seconds')
-        meta(property='og:image', content='https://camo.githubusercontent.com/60c67cf9ac2db30d478d21755289c423e1f985c6/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f66726565636f646563616d702f776964652d736f6369616c2d62616e6e65722e706e67')
     body
         // JavaScript SDK
         div#fb-root
@@ -65,7 +64,7 @@ html
                     input(type='hidden', name='id', value=poll._id)
                     input.btn.btn-pink#addVoteBtn(type='submit', value='Add & Vote')
                 - if(auth) {
-                .fb-share-button(data-href='http://murmuring-cove-35559.herokuapp.com/polls/'+poll._id, data-layout='button', data-size='small', data-mobile-iframe='false')
+                .fb-share-button(data-href='http://murmuring-cove-35559.herokuapp.com/polls/'+poll._id, data-layout='button', data-size='large', data-mobile-iframe='false')
                     a.fb-xfbml-parse-ignore(target='_blank', href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&src=sdkpreparse') Share
                 - }
             .canvasCont
