@@ -1,6 +1,6 @@
 body {
     color: #484848;
-    font-family: Helvetica;
+    font-family: Circular;
 }
 
 /* Navbar */
@@ -56,10 +56,13 @@ i {
     padding-top: 30px;
 }
 
+
+
 .segmentTitle {
     font-size: 22px;
     font-weight: bold;
 }
+
 
 .pollItem {
     display: block;
@@ -106,20 +109,35 @@ i {
 
 /* Index */
 
+.jumbotron {
+  background-color: #2596b4;
+  padding: 0;
+  width: 100%;
+}
+
 .about {
     margin: 0;
-    background: #fff;
+    width: 100%;
+    padding-left: 70px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: inline-block;
 }
 
 .about h1 {
-    font-size: 44px;
+    font-size: 42px;
     font-weight: bold;
-    color: #FF5A5F;
+    color: #fff;
+    text-transform: uppercase;
 }
 
 .about p {
     font-size: 36px;
+    color: #fff;
+    margin-top: 30px;
+    max-width: 70%;
 }
+
 
 .recent {
     margin-top: 50px;

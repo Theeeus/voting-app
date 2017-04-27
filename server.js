@@ -42,5 +42,5 @@ passport.deserializeUser(function(obj, done) {
 });
 
 app.listen(port, function(){
-    console.log('listening');
+    console.log('listening on port '+port);
 });

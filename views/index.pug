@@ -29,14 +29,15 @@ html
                 a.btn.btn-default.navbarLinks(href='/mypolls') My Polls
                 a.btn.btn-danger.logoutBtn(href='/logout') Logout
         - }
-        .container
+        .jumbotron
             .about
-                h1 Create a Free Poll in Seconds.
-                p Social Polls is a free tool for creating</br>intuitive and easy-to-use polls that you can share</br>with your friends on Facebook.
+                h1 CREATE A FREE POLL IN SECONDS
+                p Social Polls is a free tool for creating intuitive and easy-to-use polls that you can share with your friends on Facebook.
+        .container
             .recent
                 h2.segmentTitle Recent Polls
                 - for (var i=0;i<polls.length;i++) {
-                a.pollItem(href='/polls/'+polls[i].id) #{polls[i].name}
+                    a.pollItem(href='/polls/'+polls[i].id) #{polls[i].name}
                 - }
         .footer
             p
