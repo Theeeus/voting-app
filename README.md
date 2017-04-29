@@ -17,4 +17,4 @@ For [Free Code Camp](http://freecodecamp.com) - [Build a Voting App](https://www
 
 
 ### Live Demo
-[https://murmuring-cove-35559.herokuapp.com](https://murmuring-cove-35559.herokuapp.com)
+[https://social-polls.herokuapp.com](https://social-polls.herokuapp.com)
