@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>http://social-polls.herokuapp.com/polls</loc>
+  <lastmod>2017-04-30</lastmod>
+  <priority>1.0</priority>
+</url>
+<url>
+  <loc>http://social-polls.herokuapp.com/polls/5906ad1d41975c0004111640</loc>
+  <lastmod>2017-04-30</lastmod>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://social-polls.herokuapp.com/polls/5906abc7f845320004df6fca</loc>
+  <lastmod>2017-04-30</lastmod>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://social-polls.herokuapp.com/polls/588be20a734d1d20b6683da9</loc>
+  <lastmod>2017-04-30</lastmod>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://social-polls.herokuapp.com/polls/588be28b734d1d20b6683dc4</loc>
+  <lastmod>2017-04-30</lastmod>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://social-polls.herokuapp.com/new</loc>
+  <lastmod>2017-04-30</lastmod>
+  <priority>0.6</priority>
+</url>
+</urlset>
